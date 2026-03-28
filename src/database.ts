@@ -9,10 +9,11 @@ export const config: Knex.Config = {
     filename: env.DATABASE_URL,
   },
   useNullAsDefault: true, // por padrão todos os valores do banco são nulos.
-  migrations: { // configuraçoes das migrations
+  migrations: {
+    // configuraçoes das migrations
     extension: 'ts',
     directory: './db/migrations',
-  }
+  },
 }
 
 export const knex = setupKnex(config)
